@@ -7,3 +7,12 @@ services:
       - './source:/app/'
     ports:
       - '3000:3000'
+
+  mysql:
+      image: mysql:5.7
+      environment:
+        MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+      #volumes:
+      #  - data
+      ports:
+        - '3306:3306'
